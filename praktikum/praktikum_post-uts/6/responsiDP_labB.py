@@ -1,7 +1,7 @@
 #RESPONSI DASPRO LAB B
-#Nama	:
-#NIM	:
-#Tanggal: 
+#Nama	: Ahmad Alexander
+#NIM	: 24010316140048
+#Tanggal: 14 Oktober 2019
 
 #1. Buatlah fungsi untuk menentukan ongkos kirim dari suatu barang berdasarkan grand total dan negara pengirimnya.
 #defSpek
@@ -14,7 +14,34 @@
 #Pembelian 100001-150000, ongkirnya 50000 (US), 65000 (UK)
 #Pembelian >150000 ongkirnya gratis (0)
 #contoh: shipping(120000,"UK") --> 65000
-
+#realisasi
+def shipping(x,y):
+	if x == 50000:
+		if y == "US":
+			return 26000
+		elif y == "UK":
+			return 28000
+		else:
+			return "Masukan tidak valid"
+	elif x > 50000 and x <= 100000:
+		if y == "US":
+			return 38000
+		elif y == "UK":
+			return 45000
+		else:
+			return "Masukan tidak valid"   
+	elif x > 100000 and x <= 150000:
+		 if y == "US":
+			return 50000
+		elif y == "UK":
+			return 65000
+		else:
+			return "Masukan tidak valid" 
+	elif x > 150000:
+		if y == "US" or y == "UK":
+			return "ongkirnya gratis (0)"
+#aplikasi
+print(shipping(120000,"UK"))
 
 # 2. Buatlah tipe bentukan mahasiswa dengan isi NIM dan Nama
 # constructor:
